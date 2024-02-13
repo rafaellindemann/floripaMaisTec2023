@@ -24,8 +24,28 @@ function executarExercicio03(){
 function executarExercicio04(){
     let n1 = Number(document.getElementById('ex04n1').value)
     let n2 = Number(document.getElementById('ex04n2').value)
-    let soma = n1 + n2
+    let soma = somar(n1, n2)
 
     console.log(`Ex04: ${n1} + ${n2} = ${soma}`)
     avisos.innerHTML = `Ex04: ${n1} + ${n2} = ${soma}`
+}
+function somar(n1, n2){
+    return n1 + n2
+}
+
+function executarExercicio05(){
+    let n = Number(document.getElementById('ex05n1').value)
+    let resultado
+    if(n != ''){
+        if(n%2==0){
+            resultado = 'par'
+        }else{
+            resultado = 'ímpar'
+        }
+    }else{
+        resultado = 'inválido'
+    }
+
+    console.log(`Ex05: O número digitado é ${resultado}`)
+    avisos.innerHTML = `Ex05: O número digitado é ${resultado}`
 }
