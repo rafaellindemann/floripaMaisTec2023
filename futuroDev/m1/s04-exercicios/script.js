@@ -96,5 +96,22 @@ function executarExercicio06(){
 }
 
 function executarExercicio07(){
-    
+    let hora = Number(document.getElementById('ex07hora').value)
+    let resultado
+    if(hora < 25){
+        if(hora>=6 && hora<12 ){
+            resultado = 'Bom dia!'
+        }else{
+            if(hora>=12 && hora<19){
+                resultado = 'Boa tarde!'
+            }else{
+                resultado = 'Boa noite!'
+            }
+        }
+    }else{
+        resultado = 'inválido'
+    }
+
+    console.log(`Ex07: ${resultado}`)
+    avisos.innerHTML = `Ex07: ${resultado}`
 }
