@@ -36,16 +36,15 @@ function somar(n1, n2){
 function executarExercicio05(){
     let n = Number(document.getElementById('ex05n1').value)
     let resultado
-    if(n != ''){
-        if(n%2==0){
-            resultado = 'par'
-        }else{
-            resultado = 'ímpar'
-        }
+    if(n > 0){
+        resultado = 'positivo'
     }else{
-        resultado = 'inválido'
+        if(n < 0){
+            resultado = 'negativo'
+        }else{
+            resultado = 'zero'
+        }
     }
-
     console.log(`Ex05: O número digitado é ${resultado}`)
     avisos.innerHTML = `Ex05: O número digitado é ${resultado}`
 }
@@ -114,4 +113,20 @@ function executarExercicio07(){
 
     console.log(`Ex07: ${resultado}`)
     avisos.innerHTML = `Ex07: ${resultado}`
+}
+function executarExercicio08(){
+    let n = Number(document.getElementById('ex08n').value)
+    let resultado
+    if(n != ''){
+        if(n%2==0){
+            resultado = 'par'
+        }else{
+            resultado = 'ímpar'
+        }
+    }else{
+        resultado = 'inválido'
+    }
+
+    console.log(`Ex08: O número digitado é ${resultado}`)
+    avisos.innerHTML = `Ex08: O número digitado é ${resultado}`
 }
