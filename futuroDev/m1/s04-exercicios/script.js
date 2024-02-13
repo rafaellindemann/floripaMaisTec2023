@@ -49,3 +49,52 @@ function executarExercicio05(){
     console.log(`Ex05: O número digitado é ${resultado}`)
     avisos.innerHTML = `Ex05: O número digitado é ${resultado}`
 }
+function executarExercicio06(){
+    // Crie 3 objetos com propriedades representando informações pessoais (nome, idade, nacionalidade e profissão) e exiba essas informações com um console.log para cada objeto.
+    const pessoa0 = {
+        nome: 'Zeroberto',
+        idade: '55',
+        nacionalidade: 'Brasileiro',
+        profissao: 'Preparador'
+    }
+    const pessoa1 = {
+        nome: 'Humberto',
+        idade: '25',
+        nacionalidade: 'Uruguaio',
+        profissao: 'Queijeiro'
+    }
+    const pessoa2 = {
+        nome: 'Doisberto',
+        idade: '33',
+        nacionalidade: 'Brasileiro',
+        profissao: 'Bicheiro'
+    }
+
+    console.log(`Ex06: `)
+    console.log(`pessoa0`)
+    console.log(pessoa0)
+    console.log(`pessoa1`)
+    console.log(pessoa1)
+    console.log(`pessoa2`)
+    console.log(pessoa2)
+
+    let p = document.createElement('p')
+    p.innerText = 'Ex06'
+    avisos.appendChild(p)
+
+    p = document.createElement('p')
+    p.innerText = `-Pessoa0 = Nome: ${pessoa0.nome}; Idade: ${pessoa0.idade}; Nacionalidade: ${pessoa0.nacionalidade}; Profissão: ${pessoa0.profissao}`
+    avisos.appendChild(p)
+
+    p = document.createElement('p')
+    p.innerText = `-Pessoa1 = Nome: ${pessoa1.nome}; Idade: ${pessoa1.idade}; Nacionalidade: ${pessoa1.nacionalidade}; Profissão: ${pessoa1.profissao}`
+    avisos.appendChild(p)
+
+    p = document.createElement('p')
+    p.innerText = `-Pessoa2 = Nome: ${pessoa2.nome}; Idade: ${pessoa2.idade}; Nacionalidade: ${pessoa2.nacionalidade}; Profissão: ${pessoa2.profissao}`
+    avisos.appendChild(p)
+}
+
+function executarExercicio07(){
+    
+}
