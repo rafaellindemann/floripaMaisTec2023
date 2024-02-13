@@ -21,3 +21,11 @@ function executarExercicio03(){
     console.log(`Ex03: ${string1} ${string2}`)
     avisos.innerHTML = `Ex03: ${string1} ${string2}`
 }
+function executarExercicio04(){
+    let n1 = Number(document.getElementById('ex04n1').value)
+    let n2 = Number(document.getElementById('ex04n2').value)
+    let soma = n1 + n2
+
+    console.log(`Ex04: ${n1} + ${n2} = ${soma}`)
+    avisos.innerHTML = `Ex04: ${n1} + ${n2} = ${soma}`
+}
