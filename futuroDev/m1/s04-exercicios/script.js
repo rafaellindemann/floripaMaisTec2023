@@ -130,3 +130,58 @@ function executarExercicio08(){
     console.log(`Ex08: O número digitado é ${resultado}`)
     avisos.innerHTML = `Ex08: O número digitado é ${resultado}`
 }
+function executarExercicio09(){
+    let n = Number(document.getElementById('ex09n').value)
+    switch(n){
+        case 1: avisos.innerHTML = "Janeiro"
+        console.log('Janeiro')
+        break
+        case 2: avisos.innerHTML = "Fevereiro"
+        console.log('Fevereiro')
+        break
+        case 3: avisos.innerHTML = "Março"
+        console.log('Março')
+        break
+        case 4: avisos.innerHTML = "Abril"
+        console.log('Abril')
+        break
+        case 5: avisos.innerHTML = "Maio"
+        console.log('Maio')
+        break
+        case 6: avisos.innerHTML = "Junho"
+        console.log('Junho')
+        break
+        case 7: avisos.innerHTML = "Julho"
+        console.log('Julho')
+        break
+        case 8: avisos.innerHTML = "Agosto"
+        console.log('Agosto')
+        break
+        case 9: avisos.innerHTML = "Setembro"
+        console.log('Setembro')
+        break
+        case 10: avisos.innerHTML = "Outubro"
+        console.log('Outubro')
+        break
+        case 11: avisos.innerHTML = "Novembro"
+        console.log('Novembro')
+        break
+        case 12: avisos.innerHTML = "Dezembro"
+        console.log('Dezembro')
+        break
+        default: avisos.innerHTML = "Valor incorreto!"
+        console.log('Valor incorreto!')
+    }
+}
+
+function executarExercicio10(){
+    let idade = Number(document.getElementById('ex10n').value)
+    if(idade >= 18){
+        avisos.innerHTML = 'Maior de idade'
+        console.log('Maior de idade');
+    }else{
+        avisos.innerHTML = 'Menor de idade'
+        console.log('Menor de idade');
+
+    }
+}
