@@ -15,3 +15,9 @@ function executarExercicio02(){
         avisos.innerHTML = `Ex02: Ops, você não digitou um número...`;
     }
 }
+function executarExercicio03(){
+    let string1 = 'Combine duas strings usando o operador de concatenação e exiba o resultado no console.'
+    let string2 = 'Utilize o template string ou a concatenação simples.'
+    console.log(`Ex03: ${string1} ${string2}`)
+    avisos.innerHTML = `Ex03: ${string1} ${string2}`
+}
