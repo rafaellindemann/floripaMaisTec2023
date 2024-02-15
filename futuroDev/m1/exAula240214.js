@@ -17,6 +17,12 @@ do {
         case 'LARANJA':
             console.log(`${nome}: R$7,99 `);
             break;
+        case 'MAÇÃ':
+        case 'MACA':
+        case 'MAÇA':
+        case 'MACÃ':
+            console.log(`${nome}: R$7,99 `);
+            break;
         case '0':
             console.log(`Programa finalizado lindamente`);
             break;
