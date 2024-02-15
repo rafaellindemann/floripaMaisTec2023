@@ -5,9 +5,9 @@
 let nome;
 
 do {
-    nome = prompt(`Digite o nome do produto:\ndigite '0' para parar.`).toUpperCase();
+    nome = prompt(`Digite o nome do produto:\ndigite '0' para parar.`);
     
-    switch (nome) {
+    switch (nome.toUpperCase()) {
         case 'MORANGO':
             console.log(`${nome}: R$5,99 `);
             break;
