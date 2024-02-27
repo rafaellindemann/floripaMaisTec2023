@@ -3,6 +3,6 @@ function alterarNome(){
 }
 
 function saudar(){
-    alert("Seja bem vindo!")
+    alert("Acertou!")
 
 }

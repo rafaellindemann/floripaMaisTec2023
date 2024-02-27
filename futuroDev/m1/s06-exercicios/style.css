@@ -11,7 +11,6 @@ body, html{
 header {
     background-color: #222;
     padding: 20px;
-    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -57,7 +56,6 @@ footer {
     background-color: #222;
     padding: 20px;
     text-align: center;
-    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -72,12 +70,26 @@ footer {
 }
 
 button{
-    /* background-color: black; */
-    /* color: orangered;
-    border-radius: 5px; */
 
     border-radius: 5px;
     background: linear-gradient(145deg, #5a5a5a, #4c4c4c);
     box-shadow:  20px 20px 60px #474747, -20px -20px 60px #616161;
+    color: #ffa500;
 
+}
+
+.animacao {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: mover 2s ease-in-out infinite alternate; /* Nome da animação, duração, timing-function, repetição */
+}
+
+@keyframes mover {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(30% - 100px); /* Move o elemento para a direita até o final da tela */
+    }
 }
