@@ -67,6 +67,6 @@ footer {
     height: 200px;
     width: 300px;
 }
-#pSobre{
+#pSobre, p{
     line-height: 25px;
 }
