@@ -70,3 +70,10 @@ footer {
 #pSobre, p{
     line-height: 25px;
 }
+
+button{
+    background-color: black;
+    color: orangered;
+    border-radius: 5px;
+    
+}
