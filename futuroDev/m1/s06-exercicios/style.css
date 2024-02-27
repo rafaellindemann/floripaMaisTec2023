@@ -72,8 +72,12 @@ footer {
 }
 
 button{
-    background-color: black;
-    color: orangered;
+    /* background-color: black; */
+    /* color: orangered;
+    border-radius: 5px; */
+
     border-radius: 5px;
-    
+    background: linear-gradient(145deg, #5a5a5a, #4c4c4c);
+    box-shadow:  20px 20px 60px #474747, -20px -20px 60px #616161;
+
 }
