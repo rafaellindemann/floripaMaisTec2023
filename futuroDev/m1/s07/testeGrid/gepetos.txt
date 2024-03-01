@@ -1,0 +1,14 @@
+background-position
+A propriedade `background-position` em CSS aceita uma variedade de valores que podem ser usados para posicionar a imagem de fundo dentro do elemento. Aqui estão os valores possíveis:
+
+1. **Coordenadas em pixels:** Você pode especificar as coordenadas horizontais e verticais onde deseja posicionar a imagem, por exemplo: `background-position: 100px 200px;`.
+
+2. **Palavras-chave:**
+   - `left`, `center`, `right`: Define a posição horizontal da imagem em relação ao elemento.
+   - `top`, `center`, `bottom`: Define a posição vertical da imagem em relação ao elemento.
+
+3. **Porcentagens:** Você pode usar porcentagens para definir a posição em relação ao tamanho do elemento, por exemplo: `background-position: 50% 50%;` posicionará a imagem no centro do elemento.
+
+4. **Combinando palavras-chave e porcentagens:** Você pode combinar palavras-chave e porcentagens para definir a posição horizontal e vertical, por exemplo: `background-position: left 20% bottom 30%;`.
+
+Lembrando que, se você fornecer apenas um valor, ele será aplicado horizontalmente, e o valor vertical será definido como `center` por padrão. Se você fornecer dois valores, o primeiro será aplicado horizontalmente e o segundo verticalmente.

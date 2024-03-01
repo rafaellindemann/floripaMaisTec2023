@@ -1,0 +1,27 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.col1{
+    background-color: black;
+    background-image: url('img/bg.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: right, left; */
+    background-position: center;
+    /* border-radius: 10px; */
+
+}
+.col2{
+    background-color: blueviolet;
+}
