@@ -12,30 +12,32 @@
         <div class="col2">
             <!-- img logo -->
             <!-- <div class="info"> -->
-                <span>Prime Bank</span>
-                <span>Let's signing you in</span>
+                <span class="title">PRIME BANK</span>
+                <span class="subtitle text-muted mt-6">Let's signing you in</span>
             <!-- </div> -->
 
             <!-- PAREI EM 2:09:19 DA AULA S7 240228 *** -->
 
-            <form action="">
-                <input type="email" name="" id="" placeholder="Email address">
-                <input type="password" name="" id="" placeholder="Password">
+            <form id="formLogin" onsubmit="login(event)" class="mt-14">
+                <input id="inpEmail" name="email" required type="email" name="" id="" placeholder="Email address">
+                <input id="inpPassword" name="password" required type="password" name="" id="" placeholder="Password">
 
                 <span>Forgot password?</span>
+                <!-- <a href="esqueci-senha">Forgot password?</a> -->
                 <button type="submit">Log in</button>
             </form>
 
             <!-- <div class="sociais"> -->
-                <label for="">Or login with</label>
-                <div>
+                <label for="" class="mt-14 text-muted">Or login with</label>
+                <div class="row mt-6" >
                     <label for="">Google</label>
                     <label for="">Apple</label>
                 </div>
             <!-- </div> -->
 
-            <span>Don't have an account? <b>Sign in</b></span>
+            <span class="dont-account">Don't have an account? <a href="">Sign in</a></span>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
