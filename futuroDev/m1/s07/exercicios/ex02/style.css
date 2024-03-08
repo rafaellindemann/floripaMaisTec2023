@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr; /* Header com 70px de altura, restante da página com altura flexível */
+    grid-template-columns: 120px 1fr; /* Sidebar com 120px de largura, restante da página com largura flexível */
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+    height: 100vh; /* Ocupa toda a altura da viewport */
+}
+
+header {
+    grid-area: header;
+    background-color: #3498db; /* Azul */
+    color: white;
+    text-align: center;
+    line-height: 70px; /* Centraliza o texto verticalmente */
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: #2ecc71; /* Verde */
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Centraliza o texto verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+    padding: 20px;
+}
+
+
+button{
+    border: 0px;
+    border-radius: 5px;
+}
+#btRosa{
+    background-color: #ff00ff;
+}
+#btAmarelo{
+    background-color: #ffff00;
+}
+#btVerde{
+    background-color: #00ff00;
+}
