@@ -1,0 +1,59 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    height: 70px;
+    background-color: #3498db; /* Azul */
+    color: white;
+    text-align: center;
+    line-height: 70px; /* Centraliza o texto verticalmente */
+}
+
+.container {
+    display: flex; /* Usa flexbox para alinhar sidebar e main lado a lado */
+    height: calc(100% - 70px);
+
+}
+
+aside {
+    width: 120px;
+    background-color: #2c2c2c; /* Verde */
+    color: white;
+    text-align: center;
+    /* line-height: 50px; Centraliza o texto verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px;
+
+}
+
+main {
+    flex: 1; /* Faz com que main ocupe todo o espaço restante */
+    background-color: #e74c3c; /* Vermelho */
+    color: black;
+    padding: 20px;
+}
+
+button{
+    border: 0px;
+    border-radius: 5px;
+}
+#btRosa{
+    background-color: #ff00ff;
+}
+#btAmarelo{
+    background-color: #ffff00;
+}
+#btVerde{
+    background-color: #00ff00;
+}
