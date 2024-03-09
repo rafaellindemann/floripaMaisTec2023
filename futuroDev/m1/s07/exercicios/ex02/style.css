@@ -2,28 +2,28 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: 70px 1fr; /* Header com 70px de altura, restante da página com altura flexível */
-    grid-template-columns: 120px 1fr; /* Sidebar com 120px de largura, restante da página com largura flexível */
+    grid-template-rows: 70px 1fr; 
+    grid-template-columns: 120px 1fr; 
     grid-template-areas: 
         "header header"
         "sidebar main";
-    height: 100vh; /* Ocupa toda a altura da viewport */
+    height: 100vh; 
 }
 
 header {
     grid-area: header;
-    background-color: #3498db; /* Azul */
+    background-color: #3498db; 
     color: white;
     text-align: center;
-    line-height: 70px; /* Centraliza o texto verticalmente */
+    line-height: 70px; 
 }
 
 aside {
     grid-area: sidebar;
-    background-color: #2ecc71; /* Verde */
+    background-color: #2ecc71; 
     color: white;
     text-align: center;
-    line-height: 50px; /* Centraliza o texto verticalmente */
+    line-height: 50px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -33,7 +33,7 @@ aside {
 
 main {
     grid-area: main;
-    background-color: #e74c3c; /* Vermelho */
+    background-color: #e74c3c; 
     color: white;
     padding: 20px;
 }

@@ -1,7 +1,6 @@
 
 function selecionarRosa(){
     document.getElementsByTagName("main")[0].style.backgroundColor = '#ff00ff'
-    // document.getElementById('conteudo').backgroundColor
 }
 function selecionarAmarelo(){
     document.getElementsByTagName("main")[0].style.backgroundColor = '#ff0'

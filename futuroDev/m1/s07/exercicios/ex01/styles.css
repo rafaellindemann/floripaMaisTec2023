@@ -11,24 +11,23 @@ body {
 
 header {
     height: 70px;
-    background-color: #3498db; /* Azul */
+    background-color: #3498db;
     color: white;
     text-align: center;
-    line-height: 70px; /* Centraliza o texto verticalmente */
+    line-height: 70px; 
 }
 
 .container {
-    display: flex; /* Usa flexbox para alinhar sidebar e main lado a lado */
+    display: flex; 
     height: calc(100% - 70px);
 
 }
 
 aside {
     width: 120px;
-    background-color: #2c2c2c; /* Verde */
+    background-color: #2c2c2c; 
     color: white;
     text-align: center;
-    /* line-height: 50px; Centraliza o texto verticalmente */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -38,8 +37,8 @@ aside {
 }
 
 main {
-    flex: 1; /* Faz com que main ocupe todo o espaço restante */
-    background-color: #e74c3c; /* Vermelho */
+    flex: 1; 
+    background-color: #e74c3c;
     color: black;
     padding: 20px;
 }
