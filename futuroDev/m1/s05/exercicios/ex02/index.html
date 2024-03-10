@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Mercado</title>
+</head>
+<body>
+  <header>
+    <h1>MERCADO</h1>
+  </header>
+  <main>
+    <section class="painel">
+      <h2>Consultar Produto</h2>
+      <form id="consultForm">
+        <label for="productCode">Código do Produto:</label>
+        <input type="text" id="productCode" name="productCode">
+        <button type="button" onclick="consultarValor()">Consultar Valor</button>
+        <button type="button" onclick="comprar()">Comprar</button>
+      </form>
+    </section>
+    <section id="resultado">
+      <!-- O resultado da consulta ou ação aparecerá aqui -->
+    </section>
+  </main>
+
+  <script>
+    function consultarValor() {
+
+      var productCode = document.getElementById('productCode').value;
+      document.getElementById('resultado').innerHTML = '<p>O valor do produto com código ' + productCode + ' é R$ XX,XX</p>';
+    }
+
+    function comprar() {
+      document.getElementById('resultado').innerHTML = '<p>Compra realizada com sucesso!</p>';
+    }
+  </script>
+</body>
+</html>
