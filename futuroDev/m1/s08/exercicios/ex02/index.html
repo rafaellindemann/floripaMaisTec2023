@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com Header, Sidebar e Main</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>Header</header>
+
+    <div class="container">
+        <aside>
+            <button class="botoes" onclick="selecionarRosa()" id="btRosa">Rosa</button>
+            <button class="botoes" onclick="selecionarAmarelo()" id="btAmarelo">Amarelo</button>
+            <button class="botoes" onclick="selecionarVerde()" id="btVerde">Verde</button>
+
+        </aside>
+        <main id="conteudo">
+            <p><< Altere a cor de fundo do main usando os botões à esquerda</p>
+            <button onclick="alterarBotoes()">Mudar texto dos botões</button>
+
+            <h1>Falta verificar o forEach do vetor de botoes</h1>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
