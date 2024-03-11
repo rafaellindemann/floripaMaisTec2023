@@ -36,3 +36,8 @@ body {
   button:hover {
     background-color: #555;
   }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }

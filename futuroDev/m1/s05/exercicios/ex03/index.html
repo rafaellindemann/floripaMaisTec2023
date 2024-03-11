@@ -14,10 +14,13 @@
     <section class="painel">
       <h2>Consultar Produto</h2>
       <form id="consultForm">
-        <label for="productCode">Código do Produto:</label>
-        <input type="text" id="productCode" name="productCode">
-        <button type="button" onclick="consultarValor()">Consultar Valor</button>
-        <button type="button" onclick="comprar()">Comprar</button>
+        <label for="inpNomeProduto">Nome:
+          <input type="text" id="inpNomeProduto" name="productCode">
+        </label>
+        <label for="inpPrecoProduto">Preço:
+          <input type="text" id="inpPrecoProduto" name="productCode">
+        </label>
+        <button type="submit" onclick="adicionarAoCarrinho(event)">Adicionar ao carrinho</button>
       </form>
     </section>
     <section id="resultado">
@@ -25,16 +28,6 @@
     </section>
   </main>
 
-  <script>
-    function consultarValor() {
-
-      var productCode = document.getElementById('productCode').value;
-      document.getElementById('resultado').innerHTML = '<p>O valor do produto com código ' + productCode + ' é R$ XX,XX</p>';
-    }
-
-    function comprar() {
-      document.getElementById('resultado').innerHTML = '<p>Compra realizada com sucesso!</p>';
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
