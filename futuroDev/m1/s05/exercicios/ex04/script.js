@@ -26,10 +26,15 @@ function adicionarAoCarrinho(e){
 }
 
 function calcularTotalCarrinho(){
-    const somatorioPrecos = carrinho.reduce((acumulador, item) => {
-        return acumulador + item.preco;
-    }, 0);
-    alert("Valor total do carrinho R$: " + somatorioPrecos.toFixed(2))
+
+    if(carrinho.length > 0){
+        const somatorioPrecos = carrinho.reduce((acumulador, item) => {
+            return acumulador + item.preco;
+        }, 0);
+        alert("Valor total do carrinho R$: " + somatorioPrecos.toFixed(2))
+    }else{
+        alert("Carrinho vazio!")
+    }
 }
 
 
