@@ -14,7 +14,14 @@ function alterarBotoes(){
 
     console.log(botoes);
 
-    botoes.forEach((bt) => {
-        bt.innerText += 1
-    });
+    for(i=0; i<botoes.length; i++) {
+        if(!botoes[i].innerText.includes('Main')){
+
+            botoes[i].innerText = 'Main >> ' + botoes[i].innerText
+        }
+    }
+
+    // botoes.forEach((bt) => {
+    //     bt.innerText += 1
+    // });
 }
