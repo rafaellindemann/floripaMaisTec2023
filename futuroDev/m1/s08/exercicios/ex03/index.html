@@ -11,7 +11,7 @@
     <header>Header</header>
 
     <div class="container">
-        <aside>
+        <aside id="menu">
             <button class="botoes" onclick="selecionarRosa()" id="btRosa">Rosa</button>
             <button class="botoes" onclick="selecionarAmarelo()" id="btAmarelo">Amarelo</button>
             <button class="botoes" onclick="selecionarVerde()" id="btVerde">Verde</button>
@@ -20,8 +20,11 @@
         <main id="conteudo">
             <p><< Altere a cor de fundo do main usando os botões à esquerda</p>
             <button onclick="alterarBotoes()">Mudar texto dos botões</button>
+            <div id="divNovoBotao">
+                <p>Crie um novo botão com uma cor aleatória</p>
+                <button onclick="criarBotao()">Novo Botão</button>
+            </div>
 
-            <h1>Falta verificar o forEach do vetor de botoes</h1>
         </main>
     </div>
 

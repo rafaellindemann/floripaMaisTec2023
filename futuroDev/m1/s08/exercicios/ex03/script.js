@@ -1,4 +1,4 @@
-
+[]
 function selecionarRosa(){
     document.getElementById('conteudo').style.backgroundColor = '#ff00ff'
 }
@@ -24,4 +24,24 @@ function alterarBotoes(){
     // botoes.forEach((bt) => {
     //     bt.innerText += 1
     // });
+}
+
+function criarBotao(){
+    var cor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    
+    bt = document.createElement('button'); 
+    bt.setAttribute('class', 'botoes')
+    bt.setAttribute('onclick', `definirCor('${cor}')`);
+    bt.innerText = cor
+    bt.style.backgroundColor = cor
+    document.getElementById('menu').appendChild(bt);
+    
+    console.log(cor);
+    
+    // <button class="botoes" onclick="selecionarVerde()" id="btVerde">Verde</button>
+}
+
+function definirCor(cor){
+    
+    document.getElementById('conteudo').style.backgroundColor = cor
 }
