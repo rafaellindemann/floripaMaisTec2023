@@ -14,16 +14,20 @@ function alterarBotoes(){
 
     console.log(botoes);
 
-    for(i=0; i<botoes.length; i++) {
-        if(!botoes[i].innerText.includes('Main')){
+    // for(i=0; i<botoes.length; i++) {
+    //     if(!botoes[i].innerText.includes('Main')){
 
-            botoes[i].innerText = 'Main >> ' + botoes[i].innerText
+    //         botoes[i].innerText = 'Main >> ' + botoes[i].innerText
+    //     }
+    // }
+
+    botoes = [...botoes]
+    botoes.forEach((bt) => {
+        if(!bt.innerText.includes('Main')){
+            bt.innerText = 'Main >> ' + bt.innerText
+
         }
-    }
-
-    // botoes.forEach((bt) => {
-    //     bt.innerText += 1
-    // });
+    });
 }
 
 function criarBotao(){
