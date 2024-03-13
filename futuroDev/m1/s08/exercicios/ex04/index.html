@@ -15,14 +15,17 @@
             <button class="botoes" onclick="selecionarRosa()" id="btRosa">Rosa</button>
             <button class="botoes" onclick="selecionarAmarelo()" id="btAmarelo">Amarelo</button>
             <button class="botoes" onclick="selecionarVerde()" id="btVerde">Verde</button>
-
         </aside>
         <main id="conteudo">
             <p><< Altere a cor de fundo do main usando os botões à esquerda</p>
             <button onclick="alterarBotoes()">Mudar texto dos botões</button>
-            <div id="divNovoBotao">
+            <div id="divNovoBotao" class="controleElementos">
                 <p>Crie um novo botão com uma cor aleatória</p>
                 <button onclick="criarBotao()">Criar novo Botão</button>
+            </div>
+            <div id="divRemoverBotao" class="controleElementos">
+                <p>Remova o último botão de cor</p>
+                <button onclick="removerBotao()">Remover Botão</button>
             </div>
 
         </main>
