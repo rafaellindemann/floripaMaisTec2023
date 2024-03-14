@@ -134,3 +134,8 @@ function desabilitarBotaoDeCriacao(){
     document.getElementById('btCriar').setAttribute('disabled', 'true');
 }
 
+function removerAtributo(){
+
+    document.getElementById('btCriar').removeAttribute('disabled');
+}
+
