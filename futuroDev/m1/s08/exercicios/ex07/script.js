@@ -91,11 +91,42 @@ function alterarPorClasse(){
 //     });
 // }
 
+// function acrescentarClasse(){
+//     var elementos = document.querySelectorAll('.botoes, .botoes-branco');
+//     // console.log(elementos);
+
+//     do{
+//         let n = Math.floor(Math.random()*elementos.length)
+//         elementos[n].classList.add('destaque')
+
+//     }while([...elementos[n].classList].indexOf('destaque') != -1)
+    
+//     console.log([...elementos[n].classList].indexOf('destaque'));
+
+// }
+
 function acrescentarClasse(){
-    var elementos = document.querySelectorAll('.botoes, .botoes-branco');
+    // let elementos = document.querySelectorAll('.botoes, .botoes-branco');
+    let elementos = document.querySelectorAll('.botoes:not(.destaque), .botoes-branco:not(.destaque)');
+    console.log(elementos);
+    if(elementos.length > 0){
+        let n = Math.floor(Math.random()*elementos.length)
+        elementos[n].classList.add('destaque')
+    }else{
+        alert("Quando todos são destaques, nenhum está realmente destacado...")
+    }
+}
+
+function removerClasse(){
+    var elementos = document.querySelectorAll('.destaque');
     console.log(elementos);
 
-    let n = Math.floor(Math.random()*elementos.length)
+    if(elementos.length > 0){
+        let n = Math.floor(Math.random()*elementos.length)
+        elementos[n].classList.remove('destaque')
+    }else{
+        alert("Nenhum destaque encontrado!")
+    }
 
-    elementos[n].classList.add('destaque')
+
 }
