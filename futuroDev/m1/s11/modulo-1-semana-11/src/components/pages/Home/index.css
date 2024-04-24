@@ -1,0 +1,28 @@
+.page-content {
+ padding: 2rem;
+ display: flex;
+ justify-content: center;
+ align-items: stretch;
+ flex-direction: column;
+}
+
+.post-category h2 {
+ margin-bottom: 1rem;
+ padding-bottom: 0.25rem;
+ border-bottom: 4px solid var(--primary);
+ width: 100%;
+}
+
+.post-category {
+ display: flex;
+ flex-direction: column;
+ border-radius: 1rem;
+ padding: 0.5rem 1rem;
+ margin-bottom: 1rem;
+}
+
+.posts-list {
+ display: grid;
+ grid-template-columns: auto auto auto auto auto;
+ gap: 1rem;
+}

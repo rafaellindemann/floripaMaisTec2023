@@ -1,0 +1,11 @@
+#simple-card {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+
+ background-color: var(--bg-dark-light);
+ border-radius: 0.5rem;
+
+ margin-bottom: 1rem;
+ padding: 1rem;
+}

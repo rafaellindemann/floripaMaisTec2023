@@ -1,0 +1,16 @@
+#tip-text {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+
+ background-color: var(--bg-second);
+ border-radius: 0.5rem;
+
+ padding: 0.5rem 1rem;
+}
+
+#tip-text img {
+ width: 1.5rem;
+ display: block;
+ margin-right: 0.5rem;
+}

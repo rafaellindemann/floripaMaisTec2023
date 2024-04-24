@@ -1,0 +1,31 @@
+.wrapper {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem 2rem;
+
+ background-color: var(--bg-second);
+ color: var(--text-primary);
+}
+
+.app-logo {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+
+ cursor: pointer;
+}
+
+.app-logo img {
+ width: 2.5rem;
+ margin-right: 1rem;
+}
+
+.app-logo:hover {
+ opacity: 0.8;
+}
+
+.app-logo h3 {
+ color: var(--text-primary);
+}

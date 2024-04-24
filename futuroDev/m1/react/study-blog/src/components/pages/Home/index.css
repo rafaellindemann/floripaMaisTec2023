@@ -1,0 +1,51 @@
+.page-content {
+ padding: 2rem;
+ display: flex;
+ justify-content: center;
+ align-items: stretch;
+ flex-direction: column;
+}
+
+.post-category h2 {
+ margin-bottom: 1rem;
+ padding-bottom: 0.25rem;
+ border-bottom: 4px solid var(--primary);
+ width: 100%;
+}
+
+.post-category {
+ display: flex;
+ flex-direction: column;
+ border-radius: 1rem;
+ padding: 0.5rem 1rem;
+ margin-bottom: 1rem;
+}
+
+.posts-list {
+ display: flex;
+ flex-direction: column;
+}
+
+/* @media é como iniciamos uma media query */
+/* em seguida definimos em qual tela queremos aplicar as definições exclusivas */
+/* @media (max-width: 425px) { celular
+/* @media (min-width: 769px) { tablet
+ .posts-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+ }
+} */
+
+/* TRATAR SOMENTE NO CELULAR */
+@media (max-width: 425px) {
+}
+/* TRATAR A PARTIR DE TELAS DE TABLET */
+@media (min-width: 769px) {
+}
+/* TRATAR A PARTIR DE TELAS DE NOTEBOOK */
+@media (min-width: 1023px) {
+}
+
+/* QUANDO HOUVER NECESSIDADE DE RESPONSIVIDADE UTILIZAR O CONCEITO MOBILE FIRST */
+/* mobile first: primeiro dispositivos móveis = css default vai ser para os dispositivos com menores tamanhos de tela e as excessões (media queries) vão tratar as telas maiores */

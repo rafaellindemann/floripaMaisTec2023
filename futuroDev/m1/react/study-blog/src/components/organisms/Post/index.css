@@ -1,0 +1,15 @@
+.post-wrapper {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: flex-start;
+ background-color: var(--bg-dark-light);
+ border-radius: 4px;
+ padding: 1rem;
+ cursor: pointer;
+ margin-bottom: 1rem;
+}
+
+.post-wrapper:hover {
+ background-color: var(--bg-dark-light-hover);
+}

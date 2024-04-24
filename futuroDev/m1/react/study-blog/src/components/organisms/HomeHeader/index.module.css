@@ -1,0 +1,14 @@
+.wrapper {
+ padding: 3rem 2rem;
+
+ background-color: var(--bg-header);
+ color: var(--text-primary);
+}
+
+.bigText {
+ color: var(--text-primary);
+}
+
+.message {
+ font-weight: 400;
+}

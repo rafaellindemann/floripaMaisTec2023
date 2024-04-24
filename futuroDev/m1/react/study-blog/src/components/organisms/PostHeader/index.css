@@ -1,0 +1,22 @@
+.post-page-header {
+ background-color: var(--bg-header);
+ padding: 1rem 2rem 2rem;
+ color: var(--text-primary);
+}
+
+.post-page-header h1 {
+ margin: 2rem 0 0.5rem;
+}
+
+.go-back {
+ border: none;
+ font-size: 1rem;
+ background-color: transparent;
+ padding: 0;
+ font-weight: 600;
+ color: var(--text-dark);
+}
+
+.go-back:hover {
+ color: var(--text-second);
+}
