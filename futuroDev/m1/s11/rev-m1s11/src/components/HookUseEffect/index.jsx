@@ -6,6 +6,7 @@ function HookUseEffect() {
   const [observar, setObservar] = useState(0);
   useEffect(() => {
     console.log('useEffect primeira renderização');
+    document.title = 'Revisão'
   }, []);
 
   // a ser executado na primeira renderização e sempre que o valor do estado observar mudar
@@ -36,6 +37,17 @@ function HookUseEffect() {
         </ul>
 
         <button onClick={() => {setObservar(o => o+1)}}>Alterar o valor do estado para causar uma renderização {observar}</button>
+        <h4>Efeitos colaterais</h4>
+        <p>Sempre que vamos executar algo fora do escopo React como uma chamada HTTP, a criação de um timer ou intervalo, a manipulação do DOM...</p>
+        <p>
+          <b>Devem estar dentro de um useEffect (porque este é o ambiente preparado para lidar com efeitos colaterais.</b>
+          <p>Exemplos perdidos</p>
+          <ul>
+            <li>document.title = "Revisão"</li>
+            <li>fetch()</li>
+            <li>serInterval()</li>
+          </ul>
+        </p>
     </div>
   )
 }
