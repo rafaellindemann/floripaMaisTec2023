@@ -21,6 +21,11 @@ function HookUseEffect() {
   // a ser executado em todas as renderizações porque não tem o segundo parâmetro
   useEffect(() => {
     console.log('useEffect: nova renderização (do sempre, sem parâmetro)');
+
+    // o hook useEffect está preparado para lidar com a desmontagem/morte do componente em uma função retornada nele
+    return () => {
+      // cancelar coisas que foram criadas neste useEffect e que não devem continuar existindo
+    }
   });
 
   return (
@@ -49,17 +54,20 @@ function HookUseEffect() {
         <p>
           <b>Ciclo de vida do componente:</b>
           <ul>
-            <li>Nasce (didMount)</li>
-            <li>É atualizado (didUpdate)</li>
-            <li>Vai morrer (willUnmount)</li>
+            <li><b>Nasce</b> (didMount - repressentado pelo useEffect com array vazio)</li>
+            <li><b>É atualizado</b> (didUpdate - repressentado pela falta do segundo parâmetro no useEffect ou pelo segundo parâmetro posuir valores no array (array não vazio))</li>
+            <li><b>Vai morrer</b> (willUnmount - pela função retornada no useEffect)</li>
           </ul>
         </p>
           <p>Exemplos perdidos</p>
           <ul>
             <li>document.title = "Revisão"</li>
             <li>fetch()</li>
-            <li>serInterval()</li>
+            <li>setInterval()</li>
           </ul>
+          <p>Precisamos tratar a desmontagem do componente quando usamos funcionalidades assíncronas que precisam ser canceladas ou com timer/inttervalos por exemplo.</p>
+
+          <h4><code>-=Tem muita explicação nos comentários do código=-</code></h4>
     </div>
   )
 }
