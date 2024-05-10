@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react"
 import './index.css'
+import useFetch from "../../hooks/useFetch";
 function HookUseEffect() {
+  const [observar, setObservar] = useState(0);
+  const [trails] = useFetch("/example.json")
 
   // didMount
   // a ser executado na primeira renderização
-  const [observar, setObservar] = useState(0);
   useEffect(() => {
     console.log('useEffect primeira renderização porque usa somente o array vazio como segundo parâmetro');
     document.title = 'Revisão'
     const interval = setInterval(() => console.log("timer sendo executado"),1000)
+    return () => {
+      // cancelar coisas que foram criadas neste useEffect e que não devem continuar existindo
+      console.log("==================\nBYE! O componente foi desmontado!\n================== ");
+      clearInterval(interval)
+    }
   }, []);
 
   // "isto aqui é um didUpdate também, tá (Prof Dani)"
@@ -24,10 +31,7 @@ function HookUseEffect() {
     console.log('useEffect: nova renderização (do sempre, sem parâmetro)');
 
     // o hook useEffect está preparado para lidar com a desmontagem/morte do componente em uma função retornada nele
-    return () => {
-      // cancelar coisas que foram criadas neste useEffect e que não devem continuar existindo
-      console.log("==================\nBYE! O componente foi desmontado!\n================== ");
-    }
+
   });
 
   return (
@@ -53,14 +57,14 @@ function HookUseEffect() {
         <p>
           <b>Devem estar dentro de um useEffect (porque este é o ambiente preparado para lidar com efeitos colaterais.</b>
         </p>
-        <p>
+        <div>
           <b>Ciclo de vida do componente:</b>
           <ul>
             <li><b>Nasce</b> (didMount - repressentado pelo useEffect com array vazio)</li>
             <li><b>É atualizado</b> (didUpdate - repressentado pela falta do segundo parâmetro no useEffect ou pelo segundo parâmetro posuir valores no array (array não vazio))</li>
             <li><b>Vai morrer</b> (willUnmount - pela função retornada no useEffect)</li>
           </ul>
-        </p>
+        </div>
           <p>Exemplos perdidos</p>
           <ul>
             <li>document.title = "Revisão"</li>
@@ -69,7 +73,19 @@ function HookUseEffect() {
           </ul>
           <p>Precisamos tratar a desmontagem do componente quando usamos funcionalidades assíncronas que precisam ser canceladas ou com timer/inttervalos por exemplo.</p>
 
-          <h4><code>-=Tem muita explicação nos comentários do código=-</code></h4>
+          <h4><code>-=Tem muita explicação nos comentários do código e observar o console também pode ser imortante=-</code></h4>
+          
+          <h2>Trilhas carregadas</h2>
+
+          // RENDERIZAÇÃO CONDICIONAL COMBADA COM MAP :D
+          {trails && trails.map( (trail) => (
+            <div key={trail.name} className="cardTrilha">
+              {trail.name}
+              <p>{trail.distance}</p>
+            </div>
+          ))}
+
+
     </div>
   )
 }

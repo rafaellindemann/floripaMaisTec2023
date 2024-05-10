@@ -4,3 +4,13 @@
     border-radius: 5px;
     margin-bottom: 5px;
 }
+
+.cardTrilha{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed rebeccapurple;
+    margin: 5px;
+}
