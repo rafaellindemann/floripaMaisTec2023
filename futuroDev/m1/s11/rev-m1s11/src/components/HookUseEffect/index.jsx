@@ -8,6 +8,7 @@ function HookUseEffect() {
   useEffect(() => {
     console.log('useEffect primeira renderização porque usa somente o array vazio como segundo parâmetro');
     document.title = 'Revisão'
+    const interval = setInterval(() => console.log("timer sendo executado"),1000)
   }, []);
 
   // "isto aqui é um didUpdate também, tá (Prof Dani)"
@@ -25,6 +26,7 @@ function HookUseEffect() {
     // o hook useEffect está preparado para lidar com a desmontagem/morte do componente em uma função retornada nele
     return () => {
       // cancelar coisas que foram criadas neste useEffect e que não devem continuar existindo
+      console.log("==================\nBYE! O componente foi desmontado!\n================== ");
     }
   });
 
