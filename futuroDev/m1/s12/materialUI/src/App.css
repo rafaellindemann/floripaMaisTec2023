@@ -5,10 +5,16 @@
   text-align: center;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .icons{
   font-size: 220px;
 }
-
+/* 
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -43,4 +49,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */

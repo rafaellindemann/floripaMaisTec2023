@@ -1,15 +1,20 @@
 import Navbar from "./components/Navbar";
 import {Outlet} from "react-router-dom"
 import {UsuariosContextProvider} from "./context/UsuariosContext"
+import Footer from "./components/Footer";
 
 function App(){
   return (
     <UsuariosContextProvider>
       <Navbar />
+
       <Outlet />
-      <footer>
-        Created by Bruno Costa
-      </footer>
+
+
+     <Footer />
+      {/* <footer>
+        footerzin
+      </footer> */}
     </UsuariosContextProvider>
   )
 }
