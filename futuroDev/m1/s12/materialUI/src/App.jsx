@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Gi3dStairs, GiAk47U, GiBullyMinion } from "react-icons/gi";
 import { Button, TextField, Card, CardContent } from '@mui/material';
+import Treco from './components/Treco';
 
 
 function App() {
@@ -100,6 +101,14 @@ function App() {
       <Gi3dStairs />
       <GiAk47U />
       <a href="https://react-icons.github.io/react-icons/">React-Icons</a>
+      
+      <div>
+        <h2>Trecos CSS modules</h2>
+        <Treco n={0} />
+        <Treco n={1} />
+        <Treco n={2} />
+      </div>
+
     </div>
   )
 }
