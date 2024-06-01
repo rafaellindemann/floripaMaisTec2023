@@ -67,18 +67,20 @@ function App() {
             <li>{novoUsuario.nome}</li>
             <li>{novoUsuario.email}</li>
           </ul>
-          <TextField label="Nome" variant="outlined" size='small'
-            value={novoUsuario.nome}
-            inputRef={nomeInputRef} // Atribuindo a referência ao input
-            margin="normal"
-            onChange={(evento) => setNovoUsuario({...novoUsuario, nome: evento.target.value})}
-          />
-          <TextField label="Email" variant="outlined" size='small'
-            value={novoUsuario.email}
-            margin="normal"
-            onChange={(evento) => setNovoUsuario({...novoUsuario, email: evento.target.value})}
-          />
-          <Button variant='contained' size='small' onClick={cadastrar}>Cadastrar</Button>
+          <div className='formCadastro'>
+            <TextField label="Nome" variant="outlined" size='small'
+              value={novoUsuario.nome}
+              inputRef={nomeInputRef} // Atribuindo a referência ao input
+              margin="normal"
+              onChange={(evento) => setNovoUsuario({...novoUsuario, nome: evento.target.value})}
+            />
+            <TextField label="Email" variant="outlined" size='small'
+              value={novoUsuario.email}
+              margin="normal"
+              onChange={(evento) => setNovoUsuario({...novoUsuario, email: evento.target.value})}
+            />
+            <Button variant='contained' size='small' onClick={cadastrar}>Cadastrar</Button>
+          </div>
         </CardContent>
 
       </Card>
