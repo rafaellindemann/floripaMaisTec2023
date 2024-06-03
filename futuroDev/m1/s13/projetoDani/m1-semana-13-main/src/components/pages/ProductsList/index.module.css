@@ -1,0 +1,24 @@
+.productsList {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+ padding: 1rem;
+ gap: 1rem;
+}
+
+.productsList > div {
+ padding: 0.5rem 1rem;
+ border: 1px solid #ccc;
+ border-radius: 0.5rem;
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+}
+
+.headerItems {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 1rem;
+}
