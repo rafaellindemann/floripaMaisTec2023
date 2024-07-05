@@ -1,0 +1,6 @@
+
+                    Bairro: Ingleses do Rio Vermelho
+                    Logradouro: Rua Intendente João Nunes Vieira  
+                    Localidade: Florianópolis
+                    UF: SC
+                    
