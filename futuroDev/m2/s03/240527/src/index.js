@@ -9,7 +9,7 @@ async function iniciar(){
     const altura = await input.question("Altura do Triângulo: ")
     const base = await input.question("Base do Triângulo: ")
 
-    console.log
+    console.log()
 
 
 }
