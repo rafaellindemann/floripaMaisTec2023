@@ -1,0 +1,21 @@
+{
+  "name": "livraria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/livros.js",
+  "scripts": {
+    "livros": "nodemon src/livros.js",
+    "auditorios": "nodemon src/auditorios.js",
+    "autores": "nodemon src/autores.js",
+    "leitores": "nodemon src/leitores.js",
+    "instrumentos": "nodemon src/instrumentos.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  },
+  "dependencies": {
+  }
+}
