@@ -8,8 +8,8 @@ class AutorCrud {
     }
 
     criar(autor){
-        console.log('bj autor: ',autor);
-        console.log('nome do autor: ',autor.getNome);
+        // console.log('bj autor: ',autor);
+        // console.log('nome do autor: ',autor.getNome);
         const autores = JSON.parse(fs.readFileSync(this.filePath, 'utf-8'))
         // jeito do professor:
         // autores.push({
@@ -21,7 +21,7 @@ class AutorCrud {
         // jeito que não funciona porque os atributos são privados:
         // autores.push(autor)
 
-        // jeito que funciona:
+        // jeito que funciona bonito:
         autores.push(autor.toJSON())
 
 
