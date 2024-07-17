@@ -17,13 +17,21 @@ const conexao = new Pool({ // cria a conexão com o banco de dados
 app.post('/pets', (req, res) => {
     const dados = req.body;
     console.log(dados);
+
+    if(!dados.nome || !dados.idade || !dados.raca || !dados.tipo || !dados.responsavel) {
+        // res.status(400).send('Dados inválidos');
+        res.status(400).json({mensagem: 'Dados inválidos'});
+        return;
+    }
     
-    conexao.query(`
+    conexao.query(
+      `
         INSERT INTO pets (nome, idade, raca, tipo, responsavel) 
-        VALUES ('${dados.nome}', '${dados.idade}', '${dados.raca}', '${dados.tipo}', '${dados.responsavel}')`, 
-    );
-    // os values são com aspas SIMPLES
-    res.send('Pet cadastrado com sucesso!');
+        VALUES ($1, $2, $3, $4, $5)
+      ` ,[dados.nome, dados.idade, dados.raca, dados.tipo, dados.responsavel]);
+
+    // res.status(201).send('Pet cadastrado com sucesso!');
+    res.status(201).json({mensagem: 'Pet cadastrado com sucesso!'});
     
     // const {nome, idade, tipo} = req.body;
     // const query = 'INSERT INTO pets (nome, idade, tipo) VALUES ($1, $2, $3)';
