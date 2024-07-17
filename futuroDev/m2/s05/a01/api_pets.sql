@@ -5,7 +5,7 @@
 -- Dumped from database version 16.3
 -- Dumped by pg_dump version 16.3
 
--- Started on 2024-07-16 02:09:00
+-- Started on 2024-07-17 01:30:06
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -82,6 +82,12 @@ COPY public.pets (id, nome, idade, raca, tipo, responsavel) FROM stdin;
 1	Bilu	14	Caramelo	Cachorro	Pai de pet
 2	Sansa	5	Fofa	Gata	Papai
 3	Barbie	3	Folgada	Gata	Princesa
+4	Petiço	30	Petiço	Cavalo	Mundo
+5	Petiço2	302	Petiço2	Cavalo2	Mundo2
+6	kkkk	302	Petiço2	Cavalo2	Mundo2
+7	gggg	302	Petiço2	Cavalo2	Mundo2
+8	um	302	Petiço2	Cavalo2	Mundo2
+9	dois	302	Petiço2	Cavalo2	Mundo2
 \.
 
 
@@ -91,7 +97,7 @@ COPY public.pets (id, nome, idade, raca, tipo, responsavel) FROM stdin;
 -- Name: pets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.pets_id_seq', 3, true);
+SELECT pg_catalog.setval('public.pets_id_seq', 9, true);
 
 
 --
@@ -103,7 +109,7 @@ ALTER TABLE ONLY public.pets
     ADD CONSTRAINT pets_pkey PRIMARY KEY (id);
 
 
--- Completed on 2024-07-16 02:09:00
+-- Completed on 2024-07-17 01:30:06
 
 --
 -- PostgreSQL database dump complete
