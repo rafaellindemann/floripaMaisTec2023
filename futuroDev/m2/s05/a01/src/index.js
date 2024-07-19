@@ -71,10 +71,27 @@ app.post('/vacinas', async (req, res) => {
 
 });
 
+// app.get("/pets", async (req, res) => {
+//   const dados = res.query;
+//   console.log(dados);
+
+//     const pets = await conexao.query('SELECT * FROM pets');
+//     res.status(200).json(pets.rows);
+// });
 app.get("/pets", async (req, res) => {
+  const dados = req.query;
+  console.log(dados);
+
+  try {
     const pets = await conexao.query('SELECT * FROM pets');
-    res.status(200).json({dados: pets.rows});
+    res.status(200).json(pets.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao consultar a tabela');
+  }
 });
+
+
 
 app.get('/bemvindo', (req, res) => {
   res.send('Bem vindo então!');
