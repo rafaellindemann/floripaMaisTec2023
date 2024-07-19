@@ -71,6 +71,11 @@ app.post('/vacinas', async (req, res) => {
 
 });
 
+app.get("/pets", async (req, res) => {
+    const pets = await conexao.query('SELECT * FROM pets');
+    res.status(200).json({dados: pets.rows});
+});
+
 app.get('/bemvindo', (req, res) => {
   res.send('Bem vindo então!');
 });
