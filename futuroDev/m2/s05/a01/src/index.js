@@ -84,6 +84,8 @@ app.get("/pets", async (req, res) => {
   
   // const pets = await conexao.query('SELECT * FROM pets');
   // const pets = await conexao.query('SELECT * FROM pets where nome ilike $1', [dados.nome]);
+
+
   if(dados.nome) {
     try {
       const pets = await conexao.query('SELECT * FROM pets where nome ilike $1', [`%${dados.nome}%`]);
@@ -102,8 +104,36 @@ app.get("/pets", async (req, res) => {
     }
   }
 
+
+  // querie do chat da aula, mas não retornou nada quando *
+  // try {
+  //   const pets = await conexao.query(`SELECT * FROM pets 
+  //     where '' IS NULL 
+  //     OR 
+  //     nome ilike '%' || $1 || '%'`, [dados.nome]);
+  //   res.status(200).json(pets.rows);
+  // } catch (err) {
+  //   console.error(err);
+  //   res.status(500).send('Erro ao consultar a tabela');
+  // }
+
 });
 
+
+// ex: localhost:3000/pets/6
+
+//TODO: se passar id que não existe ainda está retornando 204
+app.delete('/pets/:id', async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    await conexao.query('DELETE FROM pets WHERE id = $1', [id]);
+    res.status(204).json();
+  } catch {
+    res.status(500).json({mensagem: 'Não foi possível excluir o pet'});
+  }
+
+});
 
 
 app.get('/bemvindo', (req, res) => {
