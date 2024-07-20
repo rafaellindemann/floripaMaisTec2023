@@ -80,15 +80,28 @@ app.post('/vacinas', async (req, res) => {
 // });
 app.get("/pets", async (req, res) => {
   const dados = req.query;
-  console.log(dados);
-
-  try {
-    const pets = await conexao.query('SELECT * FROM pets');
-    res.status(200).json(pets.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Erro ao consultar a tabela');
+  // console.log(dados);
+  
+  // const pets = await conexao.query('SELECT * FROM pets');
+  // const pets = await conexao.query('SELECT * FROM pets where nome ilike $1', [dados.nome]);
+  if(dados.nome) {
+    try {
+      const pets = await conexao.query('SELECT * FROM pets where nome ilike $1', [`%${dados.nome}%`]);
+      res.status(200).json(pets.rows);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Erro ao consultar a tabela');
+    }
+  }else {
+    try {
+      const pets = await conexao.query('SELECT * FROM pets');
+      res.status(200).json(pets.rows);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Erro ao consultar a tabela');
+    }
   }
+
 });
 
 
