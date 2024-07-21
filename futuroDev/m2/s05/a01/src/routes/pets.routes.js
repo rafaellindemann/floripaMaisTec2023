@@ -1,8 +1,9 @@
 const {Router} = require('express');
+const PetController = require('../controllers/PetController');
 const petsRoutes = new Router();
 
 
-petsRoutes.get("/pets", async (req, res) => {
+petsRoutes.get("/", async (req, res) => {
     const dados = req.query;
 
     if(dados.nome) {
@@ -29,7 +30,7 @@ petsRoutes.get("/pets", async (req, res) => {
   // ex: localhost:3000/pets/6
   
   //TODO: se passar id que não existe ainda está retornando 204
-  petsRoutes.delete('/pets/:id', async (req, res) => {
+  petsRoutes.delete('/:id', async (req, res) => {
     const id = req.params.id;
   
     try {
@@ -41,29 +42,6 @@ petsRoutes.get("/pets", async (req, res) => {
   
   });
 
-petsRoutes.post('/pets', async (req, res) => {
-
-    try {
-      const dados = req.body;
-      console.log(dados);
-    
-      if(!dados.nome || !dados.idade || !dados.raca || !dados.tipo || !dados.responsavel) {
-          res.status(400).json({mensagem: 'Dados inválidos'});
-          return;
-      }
-      
-      await conexao.query(
-        `
-          INSERT INTO pets (nome, idade, raca, tipo, responsavel) 
-          VALUES ($1, $2, $3, $4, $5)
-        ` ,[dados.nome, dados.idade, dados.raca, dados.tipo, dados.responsavel]);
-    
-      res.status(201).json({mensagem: 'Pet cadastrado com sucesso!'});
-      
-    } catch {
-      res.status(500).json({mensagem: 'Não foi possível cadastrar o pet'});
-    }
-  
-  });
+petsRoutes.post('/', PetController.criar );
 
   module.exports = petsRoutes;
