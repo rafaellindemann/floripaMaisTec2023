@@ -1,5 +1,7 @@
 class PetController{
 
+  //TODO: post/criar tá pronto, falta trazer os outros métodos pra cá
+
     async criar(req, res){
   
         try {
@@ -51,4 +53,4 @@ class PetController{
     // }
   }
   
-  module.exports = PetController;
+  module.exports = new PetController();
