@@ -107,30 +107,6 @@ class PetController{
       }
   }
   
-    // from copilot
-    // constructor(petService){
-    //     this.petService = petService;
-    // }
-    // async getPet(req, res){
-    //     const pet = await this.petService.getPet(req.params.id);
-    //     res.json(pet);
-    // }
-    // async getPets(req, res){
-    //     const pets = await this.petService.getPets();
-    //     res.json(pets);
-    // }
-    // async createPet(req, res){
-    //     const pet = await this.petService.createPet(req.body);
-    //     res.json(pet);
-    // }
-    // async updatePet(req, res){
-    //     const pet = await this.petService.updatePet(req.params.id, req.body);
-    //     res.json(pet);
-    // }
-    // async deletePet(req, res){
-    //     await this.petService.deletePet(req.params.id);
-    //     res.json({message: 'Pet deleted'});
-    // }
   }
   
   module.exports = new PetController();
