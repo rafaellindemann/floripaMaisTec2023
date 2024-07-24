@@ -20,3 +20,22 @@ petsRoutes.post('/', PetController.criar );
 petsRoutes.put('/:id', PetController.atualizar);
 
 module.exports = petsRoutes;
+
+
+// um get de um registro específico, que não fosse como o meu listar, que é um get de todos os registros ou para um dependendo da requisição, ficaria assim:
+// petsRoutes.get("/:id", async (request, response) => {
+//   try {
+//       const id = request.params.id
+
+//       const pet = await conexao.query("SELECT * from pets where id = $1", [id])
+
+//       if (pet.rows.length === 0) {
+//           return response.status(404).json({ mensagem: 'Não foi encontrado um pet com id' })
+//       }
+
+//       response.json(pet.rows[0])
+//   } catch {
+//       response.status(500).json({ mensagem: 'Não possível cadastrar o pet' })
+//   }
+
+// })

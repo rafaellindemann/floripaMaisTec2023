@@ -78,8 +78,8 @@ class PetController{
               `, [id])
 
           const petAtualizado = await conexao.query(`
-            update pets set 
-            
+            update pets 
+            set 
             nome = $1,
             idade = $2,
             raca = $3,
