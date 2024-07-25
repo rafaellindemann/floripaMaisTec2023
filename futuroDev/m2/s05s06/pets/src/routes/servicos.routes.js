@@ -18,7 +18,7 @@ servicosRoutes.post('/', async (req, res) => {
       const dados = req.body;
       console.log(dados);
     
-      if(!dados.nome ||  !dados.preco && dados.preco !== 0) {
+      if(!dados.nome ||  !dados.preco && dados.preco !== 0) { // testa os não falsy e aceita preço 0
           res.status(400).json({mensagem: 'Dados inválidos'});
           return;
       }
